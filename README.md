@@ -2,6 +2,7 @@
 
 `fulcrum` `[ˈfʊlkrəm]` `ui`，一个小型的React组件库(可能小的都不能算是一个组件库)
 
+在线访问地址：[storybook](https://6117cac61975ba003a9bf87a-pegqhlavdx.chromatic.com/)
 
 fulcrum译为支点，切入点，也可理解为一个互联网热词：抓手。之所以做这个组件库，是为了让自己找到做组件的“抓手”，入门组件设计。
 
