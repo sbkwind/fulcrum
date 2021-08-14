@@ -1,0 +1,11 @@
+@import "../styles";
+
+$prefix: #{$cls-prefix}-icon;
+
+.#{$prefix} {
+    @each $key, $val in $themes {
+        &-#{$key} {
+            color: $val;
+        }
+    }
+}

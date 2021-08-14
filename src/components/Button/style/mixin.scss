@@ -1,0 +1,22 @@
+@mixin button-style-color(
+    $background-color,
+    $color,
+    $border-color,
+    $hover-background-color: transparentize($background-color, 0.1),
+    $hover-color: $color,
+    $hover-border-color: transparentize($border-color, 0.1)
+) {
+    background-color: $background-color;
+    color: $color;
+    border-color: $border-color;
+    &:hover {
+        background-color: $hover-background-color;
+        color: $hover-color;
+        border-color: $hover-border-color;
+    }
+}
+
+@mixin button-style-size($font-size, $padding-vertical, $padding-horizontal) {
+    padding: $padding-vertical $padding-horizontal;
+    font-size: $font-size;
+}

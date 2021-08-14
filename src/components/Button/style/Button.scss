@@ -1,0 +1,45 @@
+@import "../../styles";
+@import "./mixin.scss";
+
+$btn-types: (
+    "primary": $primary,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "success": $success,
+);
+
+.#{$cls-prefix}-btn {
+    border-width: 1px;
+    border-style: solid;
+    cursor: pointer;
+
+    @each $clsname, $color in $btn-types {
+        &-#{$clsname} {
+            @include button-style-color($color, $white, $color);
+        }
+    }
+
+    &-large {
+        @include button-style-size(14px, 8px, 12px);
+    }
+
+    &-middle {
+        @include button-style-size(12px, 6px, 10px);
+    }
+
+    &-small {
+        @include button-style-size(12px, 4px, 6px);
+    }
+
+    &-disabled {
+        & > * {
+            pointer-events: none;
+        }
+        &:disabled {
+            cursor: not-allowed;
+            background-color: $gray-400;
+            border-color: $gray-400;
+        }
+    }
+}

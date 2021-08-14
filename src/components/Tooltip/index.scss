@@ -1,0 +1,12 @@
+@import "../styles";
+
+$prefix: #{$cls-prefix}-tooltip;
+
+.#{$prefix} {
+    position: absolute;
+    padding: 4px 8px;
+    background-color: $gray-600;
+    color: $white;
+    z-index: 1000;
+    border-radius: 5px;
+}

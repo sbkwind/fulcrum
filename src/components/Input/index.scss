@@ -1,0 +1,92 @@
+@import '../styles';
+
+$prefix: #{$cls-prefix}-input;
+
+// input
+.#{$prefix} {
+    border: 1px solid $gray-400;
+    color: $gray-900;
+    font-size: 14px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    line-height: 1.5;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+    
+    &:hover {
+        border-color: $gray-500;
+    }
+
+    &:focus,
+    &:focus-visible{
+        border-color: $primary;
+        outline: none;
+    }
+    &::placeholder{
+        color: $gray-400;
+    }
+}
+
+// affix-wrapper
+.#{$prefix}-affix-wrapper {
+    position: relative;
+    display: inline-flex;
+    border: 1px solid $gray-400;
+    border-radius: 4px;
+    align-items: center;
+    padding: 4px 11px;
+    transition: border-color 0.3s;
+
+    &:hover {
+        border-color: $gray-500;
+    }
+
+    &-focused,
+    &-focused:hover {
+        border-color: $primary;
+    }
+
+    .#{$prefix}-prefix {
+        margin-right: 4px;
+    }
+
+    .#{$prefix} {
+        border: none;
+        padding: 0;
+        outline: none;
+    }
+
+    .#{$prefix}-suffix {
+        margin-left: 4px;
+    }
+
+    &-disabled {
+        background-color: $gray-100;
+        .#{$prefix} {
+            background-color: transparent;
+        }
+    }
+}
+
+// clear-icon
+.#{$prefix}-clear-icon {
+    cursor: pointer;
+    color: $gray-700;
+    transition: color .3s;
+    margin: 0 4px;
+    &:hover {
+        color: $gray-400
+    }
+    &-hidden {
+        visibility: hidden;
+    }
+}
+
+.#{$prefix}-password-icon {
+    cursor: pointer;
+    color: $gray-700;
+    transition: color .3s;
+    &:hover {
+        color: $gray-400
+    }
+}

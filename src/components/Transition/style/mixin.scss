@@ -1,0 +1,40 @@
+@mixin slide($type) {
+    .slide-#{$type} {
+        &-appear {
+            opacity: 0;
+            transform: scaleY(0);
+            &-active {
+                opacity: 1;
+                transform: scaleY(1);
+                @include origin($type);
+                transition: opacity 300ms linear, transform 300ms ease-in-out;
+            }
+        }
+        &-enter {
+            opacity: 0;
+            transform: scaleY(0);
+            &-active {
+                opacity: 1;
+                transform: scaleY(1);
+                @include origin($type);
+                transition: opacity 300ms linear, transform 300ms ease-in-out;
+            }
+        }
+        &-exit {
+            &-active {
+                opacity: 0;
+                transform: scaleY(0);
+                @include origin($type);
+                transition: opacity 300ms linear, transform 300ms ease-in-out;
+            }
+        }
+    }
+}
+
+@mixin origin($type) {
+    @if $type == "up" {
+        transform-origin: center bottom;
+    } @else if $type == "down" {
+        transform-origin: center top;
+    }
+}

@@ -1,0 +1,61 @@
+@import "../styles";
+
+$prefix: #{$cls-prefix}-img;
+
+.#{$prefix} {
+    display: inline-block;
+    position: relative;
+    overflow: auto;
+    &-inner {
+        display: block;
+        width: 100%;
+        width: auto;
+        height: auto;
+        transition: opacity 0.2s;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}
+
+.#{$prefix}-preview {
+    &-mask {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        z-index: 1000;
+        background-color: #00000073;
+    }
+
+    &-wrapper {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+    }
+
+    &-body {
+        height: 100%;
+    }
+
+    &-centered {
+        align-items: center;
+    }
+
+    &-inner {
+        height: auto;
+        width: auto;
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    &-hidden {
+        display: none;
+    }
+}

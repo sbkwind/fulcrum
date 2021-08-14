@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# fulcrum ui
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+`fulcrum` `[ˈfʊlkrəm]` `ui`，一个小型的React组件库(可能小的都不能算是一个组件库)
 
-## Available Scripts
 
-In the project directory, you can run:
+fulcrum译为支点，切入点，也可理解为一个互联网热词：抓手。之所以做这个组件库，是为了让自己找到做组件的“抓手”，入门组件设计。
 
-### `yarn start`
+本项目借鉴优秀的了`antd`🐶，采用了基础组件+二次封装(~~姑且这么叫吧，我也不知道这种方式的专业名字叫什么~~)的方式，就像`antd`依赖了`rc`库一样，本项目也封装了几个基础组件(src/components/internal)，这些组件没有样式，只满足基本的功能，在此基础上可以进一步开发。
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+~~PS：好像也就借鉴了这一条🐶~~
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+如果可能的话，这个项目会一直维护下去，也算是记录自己的学习成长过程。
 
-### `yarn test`
+TODO:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+- [ ] 优化动画开始结束和组件显示隐藏的逻辑，包括动画开始前，动画结束后等钩子函数，可以将某些常用的操作封装到Transition组件中
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [ ] 优化组件对齐部分逻辑，提取Align组件
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [ ] 调研其他动画库，完善Transition组件
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [ ] 目前需要显示与隐藏的组件均采用了完全受控组件，对于某些组件，如Tooltip，父组件可能不关心Tooltip的显示和隐藏，可以改为非受控组件，但是仍然保留外部控制的接口
 
-### `yarn eject`
+- [ ] 样式有点丑，把样式改漂亮些
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+storybook安装失败？
+1. yarn add @storybook/cli --dev
+2. yarn sb init

@@ -1,0 +1,21 @@
+@import "../styles";
+
+$prefix: #{$cls-prefix}-input-search;
+
+.#{$prefix} {
+    > input {
+        width: 100%;
+    }
+
+    &-popup {
+        position: absolute;
+        border: 1px solid $primary;
+        border-radius: 4px;
+    }
+
+    &-option-item {
+        &:hover {
+            background-color: $gray-200;
+        }
+    }
+}

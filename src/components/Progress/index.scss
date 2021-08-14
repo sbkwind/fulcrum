@@ -1,0 +1,69 @@
+@import "../styles";
+
+$prefix: #{$cls-prefix}-progress;
+
+.#{$prefix} {
+    margin-bottom: 20px;
+
+    &-bar {
+        height: 10px;
+        display: inline-block;
+        overflow: hidden;
+        border-radius: 100px;
+        width: 300px;
+        background-color: $gray-400;
+        margin: 0 7px;
+        vertical-align: middle;
+
+        &-outer {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        &-inner {
+            height: 100%;
+            border-radius: 100px;
+            background-color: $primary;
+            display: flex;
+            align-items: center;
+            position: relative;
+            transition: width 0.3s ease;
+        }
+    }
+
+    &-inside-text {
+        height: 30px;
+    }
+
+    &-text {
+        font-size: 14px;
+        color: #606266;
+        vertical-align: middle;
+    }
+
+    &-inside-text &-text {
+        color: #fff;
+    }
+}
+
+.#{$prefix}-text-start {
+    position: absolute;
+    left: 0;
+    margin-left: 10px;
+}
+.#{$prefix}-text-center,
+.#{$prefix}-text-progresscenter {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.#{$prefix}-text-end,
+.#{$prefix}-text-follow {
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+}
