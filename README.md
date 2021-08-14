@@ -1,5 +1,7 @@
 # fulcrum ui
 
+![logo](https://raw.githubusercontent.com/sbkwind/fulcrum/main/fulcrum.jpeg)
+
 `fulcrum` `[ˈfʊlkrəm]` `ui`，一个小型的React组件库(可能小的都不能算是一个组件库)
 
 在线访问地址：[storybook](https://6117cac61975ba003a9bf87a-pegqhlavdx.chromatic.com/)
